@@ -1,0 +1,159 @@
+:root {
+  --primary-background-color: linear-gradient(
+    190deg,
+    rgb(240, 240, 240),
+    rgb(180, 180, 180)
+  );
+  --secondary-background-color: linear-gradient(
+    60deg,
+    rgb(255, 255, 255),
+    rgb(225, 225, 225)
+  );
+  --primary-font-color: rgb(80, 80, 80);
+  --secondary-font-color: rgb(240, 240, 240);
+  --primary-color: rgb(225, 225, 225);
+  --secondary-color: rgb(255, 201, 0);
+  --tertiary-color: rgba(255, 201, 0, 0.3);
+  --actived-color: rgb(235, 235, 235);
+  --primary-boxShadow-color: 2px 3px 4px 1px rgba(110, 120, 120, 0.7);
+  --secondary-boxShadow-color: 0 0 0 0 rgba(0, 0, 0, 0);
+  --tertiary-boxShadow-color: 3px 4px 7px 1px rgba(113, 121, 126, 1);
+}
+
+.dark-theme {
+  --primary-background-color: linear-gradient(
+    190deg,
+    rgb(75, 75, 95),
+    rgb(25, 25, 55)
+  );
+
+  --secondary-background-color: linear-gradient(
+    60deg,
+    rgb(65, 65, 90),
+    rgb(50, 50, 75)
+  );
+
+  --primary-font-color: rgb(155, 155, 155);
+  --secondary-font-color: rgb(175, 175, 175);
+  --primary-color: rgb(65, 65, 95);
+  --secondary-color: rgb(80, 40, 175);
+  --tertiary-color: rgba(80, 40, 175, 0.3);
+  --actived-color: rgb(55, 55, 80);
+  --primary-boxShadow-color: 2px 3px 4px 1px rgba(10, 10, 10, 0.8);
+  --secondary-boxShadow-color: 0 0 0 0 rgba(0, 0, 0, 0);
+  --tertiary-boxShadow-color: 3px 4px 7px 1px rgb(15, 15, 15);
+}
+
+body {
+  background: var(--primary-background-color);
+  color: var(--primary-font-color);
+}
+
+#container {
+  display: flex;
+  justify-content: center;
+  padding: 20px 0px;
+}
+
+#icon {
+  width: 25px;
+  cursor: pointer;
+}
+
+#items-container {
+  display: flex;
+  flex-direction: column;
+  font-size: 30px;
+  font-family: "Poppins", sans-serif;
+  padding: 25px;
+  border-radius: 25px;
+  box-shadow: var(--tertiary-boxShadow-color);
+  background: var(--secondary-background-color);
+}
+
+#display {
+  width: 350px;
+  height: 68px;
+  padding: 15px;
+  margin-bottom: 15px;
+  font-size: 45px;
+  border: none;
+  border-radius: 15px;
+  box-shadow: var(--tertiary-boxShadow-color);
+  background: var(--primary-color);
+}
+
+button {
+  border-style: none;
+  border-radius: 50%;
+  box-shadow: var(--primary-boxShadow-color);
+  height: 85px;
+  width: 85px;
+  margin: 3px 5px;
+  font-size: 23px;
+  font-family: "Poppins", sans-serif;
+  user-select: none;
+}
+
+.lines {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.numbers {
+  background: var(--primary-color);
+  color: var(--primary-font-color);
+}
+
+.numbers:active {
+  background: var(--actived-color);
+  box-shadow: var(--secondary-boxShadow-color);
+}
+
+.delete-buttons {
+  background: var(--secondary-color);
+  color: var(--secondary-font-color);
+  font-size: 25px;
+  font-family: "Poppins", sans-serif;
+}
+
+.delete-buttons:active {
+  background: var(--tertiary-color);
+  box-shadow: var(--secondary-boxShadow-color);
+  color: var(--primary-font-color);
+}
+
+.operators {
+  background: var(--tertiary-color);
+  font-size: 25px;
+  font-family: "Poppins", sans-serif;
+  color: var(--primary-font-color);
+}
+
+.operators:active {
+  background: var(--actived-color);
+  box-shadow: var(--secondary-boxShadow-color);
+}
+
+#float-point {
+  background: var(--primary-color);
+  color: var(--primary-font-color);
+}
+
+#float-point:active {
+  background: var(--actived-color);
+  box-shadow: var(--secondary-boxShadow-color);
+}
+
+#equal {
+  background: var(--secondary-color);
+  color: var(--secondary-font-color);
+  font-size: 35px;
+  font-family: "Poppins", sans-serif;
+}
+
+#equal:active {
+  background: var(--tertiary-color);
+  box-shadow: var(--secondary-boxShadow-color);
+  color: var(--primary-font-color);
+}

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+    </style>
+
+</head>
+
+<body>
+    <main>
+        <div id="container">
+            <div id="items-container">
+                <div id="display">0</div>
+                <div>
+                    <img src="images/moon.png" alt="moon icon" id="icon">
+                </div>
+                <div class="lines">
+                    <button value="AC" id="delete-all" class="delete-buttons">AC</button>
+                    <button value="C" id="delete-one" class="delete-buttons">C</button>
+                    <button value="%" class="operators">%</button>
+                    <button value="/" class="operators">÷</button>
+                </div>
+                <div class="lines">
+                    <button value="7" class="numbers">7</button>
+                    <button value="8" class="numbers">8</button>
+                    <button value="9" class="numbers">9</button>
+                    <button value="*" class="operators">x</button>
+                </div>
+                <div class="lines">
+                    <button value="4" class="numbers">4</button>
+                    <button value="5" class="numbers">5</button>
+                    <button value="6" class="numbers">6</button>
+                    <button value="+" class="operators">+</button>
+                </div>
+                <div class="lines">
+                    <button value="1" class="numbers">1</button>
+                    <button value="2" class="numbers">2</button>
+                    <button value="3" class="numbers">3</button>
+                    <button value="-" class="operators">-</button>
+                </div>
+                <div class="lines">
+                    <button value="0" class="numbers">0</button>
+                    <button value="00" class="numbers">00</button>
+                    <button value="." id="float-point">.</button>
+                    <button value="=" id="equal">=</button>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="script.js"></script>
+    <script>
+        const icon = document.getElementById('icon');
+
+        icon.addEventListener('click', () => {
+            document.body.classList.toggle('dark-theme');
+            if (document.body.classList.contains('dark-theme')) {
+                icon.src = "images/sun.png";
+            } else {
+                icon.src = "images/moon.png";
+            }
+        });
+    </script>
+</body>
+
+</html>
